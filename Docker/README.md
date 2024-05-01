@@ -74,14 +74,14 @@
 1. ### CMD VS ENTRYPOINT
 
     - #### CMD:
-    * The `CMD` instruction specifies the default command and/or arguments to execute when the container starts. It can be overridden by providing a command and/or arguments when running the container.
-    * If a Dockerfile has multiple `CMD` instructions, only the last one will take effect.
-    * If the `CMD` instruction is not provided in the Dockerfile, the default command is ["/bin/sh", "-c"].
+        - The `CMD` instruction specifies the default command and/or arguments to execute when the container starts. It can be overridden by providing a command and/or arguments when running the container.
+        - If a Dockerfile has multiple `CMD` instructions, only the last one will take effect.
+        - If the `CMD` instruction is not provided in the Dockerfile, the default command is `["/bin/sh", "-c"]`
 
     - #### ENTRYPOINT
-    * The `ENTRYPOINT` instruction specifies the executable to run when the container starts, and it also allows for the default arguments to be set.
-    * Unlike CMD, the `ENTRYPOINT` command and its arguments are not overridden by providing a command when running the container. Instead, the provided command and arguments are appended to the `ENTRYPOINT` command.
-    * If a Dockerfile has multiple `ENTRYPOINT` instructions, only the last one will take effect.
+        - The `ENTRYPOINT` instruction specifies the executable to run when the container starts, and it also allows for the default arguments to be set.
+        - Unlike CMD, the `ENTRYPOINT` command and its arguments are not overridden by providing a command when running the container. Instead, the provided command and arguments are appended to the `ENTRYPOINT` command.
+        - If a Dockerfile has multiple `ENTRYPOINT` instructions, only the last one will take effect.
 
 2. ### COPY VS ADD
     - #### COPY:
