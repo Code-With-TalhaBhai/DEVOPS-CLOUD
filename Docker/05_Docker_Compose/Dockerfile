@@ -1,0 +1,8 @@
+FROM python:3.12.3
+RUN pip install poetry
+WORKDIR /code
+COPY . /code
+RUN poetry config virtualenvs.create false
+RUN poetry install
+CMD [ "poetry","run","uvicorn","main:app","--host","0.0.0.0","--reload" ]
+EXPOSE 8000

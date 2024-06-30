@@ -1,4 +1,4 @@
-### Commands Of Docker
+### Docker Commands
 
 ##### To Build image from Dockerfile
 1. docker build -f [docker-filename](optional) -t [image_name] [docker_file_path]
@@ -50,8 +50,6 @@
 12. `docker commit [container_name or id] [image_name]`
 
 
-
-
 ### Flags of Docker Commands
 
 1. `-t` === tag ['mostly for name']
@@ -68,6 +66,44 @@
 6. `a` === all
 
 
+### Docker-Compose Commands
+
+##### Create and Start Container
+1. `docker compose up`
+
+##### Lists containers for a Compose project, with current status
+2. `docker compose ps`
+
+##### List running compose projects
+3. `docker compose ls`
+
+##### Start the Services
+4. `docker compose start`
+
+##### Stop the Services
+5. `docker compose stop`
+
+##### Parse, resolve and render compose file in canonical format
+6. `docker compose config`
+
+##### Display the running process
+7. `docker compose top`
+
+##### Shows the Docker Compose version information
+8. `docker compose version`
+
+##### Stop and remove containers, networks
+9. `docker compose down`
+
+##### List images used by the containers created by docker compose file
+10. `docker compose images`
+
+##### If you change a service's Dockerfile or the contents of its build directory,to rebuild it.
+11. `docker compose build`
+
+
+##### If you want rebuild and start services both
+12. `docker compose up --build -d`
 
 ## See The Difference
 

@@ -1,0 +1,12 @@
+
+name: 'umt-class'
+services:
+  app:
+    build: 
+      context: './lahore-hello-code'
+      dockerfile: Dockerfile
+    container_name: 'talha'
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./lahore-hello-code:/code
