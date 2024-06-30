@@ -1,9 +1,9 @@
 name: "fastapi_revised"
 services:
-  api:
+  fastapi_api:
     build: 
       context: ./
       dockerfile: Dockerfile
-    container_name: fastapi_container_2
+    container_name: fastapi_revised_container_2
     ports:
-      - "8000:8000"
+      - "8000:4000"

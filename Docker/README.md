@@ -68,8 +68,9 @@
 
 ### Docker-Compose Commands
 
-##### Create and Start Container
+##### Create and Start Container(services), Build Images If Necessary
 1. `docker compose up`
+   `docker compose up -d` (In Detach-mode)
 
 ##### Lists containers for a Compose project, with current status
 2. `docker compose ps`
@@ -77,10 +78,10 @@
 ##### List running compose projects
 3. `docker compose ls`
 
-##### Start the Services
+##### Start the Services(Only Start Container thate were previously created and stop using `docker-compose stop`)
 4. `docker compose start`
 
-##### Stop the Services
+##### Only stop the Container(Services), but not remove them
 5. `docker compose stop`
 
 ##### Parse, resolve and render compose file in canonical format
@@ -92,7 +93,7 @@
 ##### Shows the Docker Compose version information
 8. `docker compose version`
 
-##### Stop and remove containers, networks
+##### Stop and remove containers, networks, volumes
 9. `docker compose down`
 
 ##### List images used by the containers created by docker compose file
