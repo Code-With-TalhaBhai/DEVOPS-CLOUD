@@ -6,4 +6,4 @@ services:
       dockerfile: Dockerfile
     container_name: fastapi_revised_container_2
     ports:
-      - "8000:4000"
+      - "4000:8000" # - "host_machine_port:container_port" -> Bind(map) container_port(8000) to host machine port(4000)

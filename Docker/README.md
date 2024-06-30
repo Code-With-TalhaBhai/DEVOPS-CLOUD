@@ -99,7 +99,7 @@
 ##### List images used by the containers created by docker compose file
 10. `docker compose images`
 
-##### If you change a service's Dockerfile or the contents of its build directory,to rebuild it.
+##### If you change a service's Dockerfile or the contents of its build directory(image),to rebuild it.
 11. `docker compose build`
 
 
