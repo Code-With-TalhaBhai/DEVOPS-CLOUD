@@ -1,0 +1,38 @@
+
+name: 'umt-class'
+services:
+  fastapi_app:
+    build:
+      context: ./lahore-hello-code
+      dockerfile: Dockerfile
+    container_name: fastapi_postgres_app
+    depends_on:
+      - postgres_cont
+    ports: 
+      - "8001:8000"
+    networks:
+      - fastapi_postgres
+
+  postgres_cont:
+    container_name: postgres_container
+    image: postgres:latest
+    restart: always
+    ports:
+      - "81:5432" # default postgres 5432 port
+    environment:
+      - POSTGRES_USER=talha_bhai
+      - POSTGRES_PASSWORD=talha_postgres_password
+      - POSTGRES_DB=first_postgres_compose
+    volumes:
+      - postgres_db_data:/var/lib/postgresql/data
+    networks:
+      - fastapi_postgres
+
+networks:
+  fastapi_postgres:
+
+volumes:
+  postgres_db_data:
+    driver: local
+
+    
