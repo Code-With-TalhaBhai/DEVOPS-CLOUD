@@ -1,53 +1,73 @@
 ### Docker Commands
 
-##### To Build image from Dockerfile
-1. docker build -f [docker-filename](optional) -t [image_name] [docker_file_path]
-    - `docker build -f Dockerfile.dev -t hello_world_img .`
+##### 1. To Build image from Dockerfile
+```
+docker build -f [docker-filename](optional) -t [image_name] [docker_file_path]
+docker build -f Dockerfile.dev -t hello_world_img .
+```
 
 
-##### To Create Container
-2. docker run -it(optional) --name=[container_name](optional) -p[local_machine_port : container_port] [image_name] 
-    - `docker run -it --name="my-container" -p 8081:8080 my_img`
+##### 2. To Create Container
+```
+docker run -it(optional) --name=[container_name](optional) -p[local_machine_port : container_port] [image_name] 
+docker run -it --name="my-container" -p 8081:8080 my_img
+```
 
 
-##### To List Images
-3. `docker images` || `docker image ls`
+##### 3. To List Images
+```
+docker images
+docker image ls
+```
 
 
-##### To List Running Containers
-4. `docker container ls`
+##### 4. To List Running Containers
+```
+docker container ls
+```
 
 
-##### To List All Containers(whether running or stopped)
-5. `docker container ls -a`
+##### 5. To List All Containers(whether running or stopped)
+```
+docker container ls -a
+```
+
+#####  6. To Show Running Processes
+```
+docker ps
+```
+
+##### To Show All Process(Running + Stoppe 7. d)
+```
+docker ps -a
+```
+
+#####  8. To Show Container Logs
+```
+docker logs [container_name]
+```
+
+#####  9. To Get Into Running Container 
+docker exec -it [container_name or id] /bin/bash/`
 
 
-##### To Show Running Processes
-6. `docker ps`
+##### 10. To Get Out Of Container Without Exiting
+```
+CTRL + P + Q
+```
 
 
-##### To Show All Process(Running + Stopped)
-7. `docker ps -a`
+##### 11. To Get Out Of Container With Exiting
+```
+CTRL + C
+exit
+```
 
 
-##### To Show Container Logs
-8. `docker logs [container_name]`
-
-
-##### To Get Into Running Container 
-9. `docker exec -it [container_name or id] /bin/bash/`
-
-
-##### To Get Out Of Container Without Exiting
-10. `CTRL + P + Q`
-
-
-##### To Get Out Of Container With Exiting
-11. `CTRL + C` || `exit`
-
-
-##### To Build Image From Running Container
-12. `docker commit [container_name or id] [image_name]`
+##### 12. To Build Image From Running Container
+```
+docker commit [container_name or id] [image_name]
+```
 
 
 ### Flags of Docker Commands
@@ -68,43 +88,67 @@
 
 ### Docker-Compose Commands
 
-##### Create and Start Container(services), Build Images If Necessary
-1. `docker compose up`
-   `docker compose up -d` (In Detach-mode)
+##### 1. Create and Start Container(services), Build Images If Necessary
+```
+docker compose up
+docker compose up -d (In Detach-mode)
+```
 
-##### Lists containers for a Compose project, with current status
-2. `docker compose ps`
+##### 2. Lists containers for a Compose project, with current status
+```
+docker compose ps
+```
 
-##### List running compose projects
-3. `docker compose ls`
+##### 3. List running compose projects
+```
+docker compose ls
+```
 
-##### Start the Services(Only Start Container thate were previously created and stop using `docker-compose stop`)
-4. `docker compose start`
+##### 4. Start the Services(Only Start Container thate were previously created and stop using `docker-compose stop`)
+```
+docker compose start
+```
 
-##### Only stop the Container(Services), but not remove them
-5. `docker compose stop`
+##### 5. Only stop the Container(Services), but not remove them
+```
+docker compose stop
+```
 
-##### Parse, resolve and render compose file in canonical format
-6. `docker compose config`
+##### 6. Parse, resolve and render compose file in canonical format
+```
+docker compose config
+```
 
-##### Display the running process
-7. `docker compose top`
+##### 7. Display the running process
+```
+docker compose top
+```
 
-##### Shows the Docker Compose version information
-8. `docker compose version`
+##### 8. Shows the Docker Compose version information
+```
+docker compose version
+```
 
-##### Stop and remove containers, networks, volumes
-9. `docker compose down`
+##### 9. Stop and remove containers, networks, volumes
+```
+docker compose down
+```
 
-##### List images used by the containers created by docker compose file
-10. `docker compose images`
+##### 10.List images used by the containers created by docker compose file
+```
+docker compose images
+```
 
-##### If you change a service's Dockerfile or the contents of its build directory(image),to rebuild it.
-11. `docker compose build`
+##### 11. If you change a service's Dockerfile or the contents of its build directory(image),to rebuild it.
+```
+docker compose build
+```
 
 
-##### If you want rebuild and start services both
-12. `docker compose up --build -d`
+##### 12.If you want rebuild and start services both
+```
+docker compose up --build -d
+```
 
 ## See The Difference
 
