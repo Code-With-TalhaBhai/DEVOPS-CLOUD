@@ -37,7 +37,7 @@ docker container ls -a
 docker ps
 ```
 
-##### To Show All Process(Running + Stoppe 7. d)
+##### 7. To Show All Process(Running + Stopped)
 ```
 docker ps -a
 ```
@@ -69,6 +69,11 @@ exit
 ##### 12. To Build Image From Running Container
 ```
 docker commit [container_name or id] [image_name]
+```
+
+##### 13. To Start Container(Already Created)
+```
+docker start [container_name or id]
 ```
 
 
