@@ -48,7 +48,9 @@ docker logs [container_name]
 ```
 
 #####  9. To Get Into Running Container 
-docker exec -it [container_name or id] /bin/bash/`
+```
+docker exec -it [container_name or id] /bin/bash/
+```
 
 
 ##### 10. To Get Out Of Container Without Exiting
